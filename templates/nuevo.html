@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/estilon.css')}}"> 
+</head>
+<body>
+    <h1>AÑADIR UN PRODUCTO</h1>
+    <br>
+    <form action="{{url_for('nuevo')}}" method="post">
+        <div class="container">
+            <div class="card">
+                <h2>Datos a ingresar</h2>
+                Nombre: <input type="text" name="nombre" required><br>
+                Cantidad: <input type="number" name="cantidad" required><br>
+                Precio: <input type="number" name="precio" required step="0.01"><br>
+                Fecha de Vendimiento: <input type="date" name="fecha_vencimiento" required><br>
+                Categoria: <select name="categoria" required >
+                    <option value="Bebida">Bebida</option>
+                    <option value="Comida">Comida</option>
+                    <option value="Herramienta">Herramienta</option>
+                    <option value="Medicamento">Medicamento</option>
+                    <option value="Material">Material</option>
+                </select>
+            </div>
+        </div>
+
+        <input type="submit" value="Añadir Producto">
+    </form>
+</body>
+</html>
